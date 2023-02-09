@@ -2,7 +2,7 @@ import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-import Posts from './views/Posts';
+import IndexPosts from './views/Posts';
 
  // Create a client
  const queryClient = new QueryClient()
@@ -10,7 +10,7 @@ import Posts from './views/Posts';
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Posts />
+      <IndexPosts />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
