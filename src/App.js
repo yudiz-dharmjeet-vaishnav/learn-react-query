@@ -1,8 +1,9 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-import IndexPosts from './views/Posts';
+import Router from './routes/Router';
 
  // Create a client
  const queryClient = new QueryClient()
@@ -10,7 +11,9 @@ import IndexPosts from './views/Posts';
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <IndexPosts />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );

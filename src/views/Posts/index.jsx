@@ -12,7 +12,6 @@ function IndexPosts() {
 
   return (
     <>
-      <div>IndexPosts</div>
       <Posts postsQuery={postsQuery} />
     </>
   )
